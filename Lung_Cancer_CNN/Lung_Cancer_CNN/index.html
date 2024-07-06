@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phân loại ảnh ác tính/lành tính</title>
+</head>
+<body>
+    <h1>Phân loại ảnh ác tính/lành tính</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <br><br>
+        <input type="submit" value="Phân loại">
+    </form>
+    <br>
+    {% if result_image_path %}
+        <img src="{{ result_image_path }}" alt="Kết quả phân loại">
+    {% endif %}
+</body>
+</html>
